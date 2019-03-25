@@ -1,0 +1,30 @@
+@charset "utf-8";
+/*------------------------------------
+
+	共通CSS
+
+--------------------------------------*/
+#top {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+h2 {
+    font-size: 40px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.bottm_line {
+  border-bottom: medium solid #000;
+  margin-bottom: 30px;
+}
+.position_reft,
+.position_light {
+  padding: 15px;
+}
+.high,
+.low {
+  display: inline-block;
+  padding: 15px;
+}
