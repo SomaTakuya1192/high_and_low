@@ -3,7 +3,7 @@
 $min = 0;
 $max = 13;
 $rand = rand($min, $max);
-$cards = array("Jk.png", "01.png", "02.png", "03.png", "04.png", "05.png", "06.png", "07.png", "08.png", "09.png", "10.png", "11.png", "12.png", "13.png");
+$cards = array("00.png", "01.png", "02.png", "03.png", "04.png", "05.png", "06.png", "07.png", "08.png", "09.png", "10.png", "11.png", "12.png", "13.png");
 //左のカード
 $leftCard = $cards[$_POST['leftCard']];
 //右のカード
