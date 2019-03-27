@@ -1,6 +1,7 @@
 <?php
 //変数を定義
-$cards = array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13");
+session_start(); //セッション変数でcardsの配列を呼び出し
+$cards = $_SESSION['cards'];
 $min = 0;
 $max = 13;
 $right_card_num = rand($min, $max);
@@ -42,11 +43,11 @@ include ('header.php');
   <span>「<?= $_POST['select'] ?>」を選択しました。</span>
 </div>
 <!--勝敗結果出力-->
-<div>
+<div class="message">
   <?= $message ?>
 </div>
 <!--index.phpに戻る-->
-<div>
+<div class="one_more">
   <a href="index.php">もう一度挑戦する</a>
 </div>
 
