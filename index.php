@@ -1,28 +1,32 @@
-<?php include ('header.php'); ?>
-
 <?php
+//変数を定義
+$cards = array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13");
 $min = 0;
 $max = 13;
-$rand = rand($min, $max);
-$cards = array("00.png", "01.png", "02.png", "03.png", "04.png", "05.png", "06.png", "07.png", "08.png", "09.png", "10.png", "11.png", "12.png", "13.png");
+$left_card_num = rand($min, $max);
+//ヘッターを出力
+include ('header.php');
 ?>
 
-<form action="process.php" method="post">
 <!--画像出力-->
-  <img class="position_reft" src="cards/<?echo $cards[$rand];?>">
-  <img class="position_light" src="cards/bg.png">
-    <br>
-<!--ラジオボタン-->
+<div>
+  <img class="position_left" src="cards/<?= $cards[$left_card_num] ?>.png">
+  <img class="position_right" src="cards/bg.png">
+</div>
+<!--フォーム-->
+<form action="result_page.php" method="post">
   <div class="high">
     <input type="radio" name="select" value="High" required="required">
     <span>High</span>
   </div>
-  <div class="low" ><input type="radio" name="select" value="Low" required="required">
+  <div class="low" >
+    <input type="radio" name="select" value="Low" required="required">
     <span>Low</span>
   </div>
-  <input class="hidden" type="hidden" name="leftCard" value="<?echo $rand; ?>">
-    <br>
-  <input type="submit" value="決定">
+  <input class="hidden" type="hidden" name="leftCard" value="<?= $left_card_num ?>">
+  <div>
+    <input type="submit" value="決定">
+  </div>
 </form>
 
 <?php include ('footer.php'); ?>
