@@ -7,8 +7,7 @@ $max = 13;
 $right_card_num = rand($min, $max);
 
 //左のカード
-$left_card_num = $_POST['leftCard'];
-$left_card = $cards[$left_card_num];
+$left_card = $cards[$_POST['leftCard']];
 //右のカード
 $right_card = $cards[$right_card_num];
 //選択結果
